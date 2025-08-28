@@ -229,4 +229,9 @@ body {
     .breadcrumb-nav h2{
         display: none;
     }
+    .producto img{
+        height: 280px;
+    }
+        
+
 }
