@@ -109,7 +109,7 @@ body {
 }
 .producto:hover {
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(20, 92, 199);
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
     color: #000000;
     transition: 0.5s;
     cursor: pointer;
@@ -233,4 +233,5 @@ body {
     .producto img{
         height: 280px;
     }
+
 }
