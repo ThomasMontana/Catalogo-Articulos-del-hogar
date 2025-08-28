@@ -1,0 +1,232 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Breadcrumb */
+.breadcrumb-nav {
+    font-size: 14px;
+    padding: 15px 15px;
+    
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    
+    
+}
+.breadcrumb-nav a {
+    text-decoration: none;
+    color: #000;
+    
+}
+.breadcrumb-nav span {
+    color: gray;
+}
+
+.breadcrumb-nav h2{
+    background-color: rgb(20, 92, 199);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+
+/* Layout principal */
+.catalogo-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 15px;
+}
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 8px 0;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000;
+}
+.sidebar ul li a:hover {
+    background-color: rgb(20, 92, 199);
+    color: white;
+    padding: 8px 8px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s;
+    
+}
+
+/* Productos */
+.productos {
+    flex: 1;
+    font-family: 'Heebo', sans-serif;
+}
+.productos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Heebo', sans-serif;
+    
+}
+.productos-header h2 {
+    font-size: 20px;
+}
+.productos-header select {
+    padding: 5px;
+}
+
+/* Grid de productos */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+}
+.producto {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+.producto:hover {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(20, 92, 199);
+    color: #000000;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+.nombre {
+    font-weight: bold;
+    margin: 10px 0;
+}
+.precio {
+    font-size: 16px;
+    font-weight: bold;
+}
+.precio-oferta {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e60000;
+}
+.precio-anterior {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(20, 92, 199);
+    text-align: center;
+    color: white;
+    padding: 14px;
+    margin-top: 30px;
+    position: absolute;
+    width: 100%;
+    
+}
+.footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*---VER MAS---*/
+.hidden {
+    display: none;
+}
+
+.btn-load {
+    display: block;
+    margin: 30px auto;
+    
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: rgb(20, 92, 199);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    
+}
+.btn-load:hover {
+    background: #333;
+}
+
+
+/*---Resp---*/
+
+.menu-btn{
+    color: #000000;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 1024px){
+    .menu-btn{
+        display:flex;
+    }
+    .sidebar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: rgba(85, 85, 85, 0.849);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        transform: translatex(-100%);
+        color: #fff;
+    }
+    .sidebar ul li{
+        margin: 15px 0;
+     
+    }
+    .sidebar.active{
+        transform: translatex(0);
+       
+    }
+    .sidebar ul li a{
+        color: #fff;
+    }
+
+    .productos-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+    .breadcrumb-nav {
+        justify-content: end;
+    }
+    .breadcrumb-nav h2{
+        display: none;
+    }
+}
